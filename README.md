@@ -9,7 +9,7 @@ This project is an end-to-end data architecture solution built to demonstrate sk
 - [Project Structure](#project-structure)
 - [Setup & Installation](#setup--installation)
 - [How to Run the ETL Pipeline](#how-to-run-the-etl-pipeline)
-- [Business Insights SQL Queries](#business-insights-SQL-Queries)
+- [Business Insights SQL Queries](#business-insights-Queries)
 - [Visualization with Power BI](#visualization-with-power-bi)
 - [Challenges & Learnings](#challenges--learnings)
 
@@ -115,7 +115,7 @@ The ETL pipeline is defined in the Airflow DAG file dags/nikhil_dag.py and consi
 After the data is loaded into Snowflake, the project uses Power BI (via DirectQuery mode) to create interactive dashboards. 
 The DArch.pbix file in the repository is a sample Power BI report that visualizes key metrics from the Superstore Sales dataset.
 
-## Business Insight Queries
+## Business Insight Queries [queries](https://github.com/nikhil1209ui/Superstore_ETL/blob/main/Snowflake_SQL_Queries/Business%20Queries)
 After loading the data into Snowflake, several SQL queries were executed to gain business insights.
 
 ## Ensuring Connections
