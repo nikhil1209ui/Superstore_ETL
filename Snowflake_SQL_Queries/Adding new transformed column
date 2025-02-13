@@ -1,0 +1,5 @@
+# adding columns to maintain data consistency in overall process because we've created 2 more calculated columns in transformation task
+
+ALTER TABLE superstore_sales
+ADD Ordermonth integer,
+ADD Orderyear integer;
