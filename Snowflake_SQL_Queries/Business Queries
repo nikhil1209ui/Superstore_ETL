@@ -1,0 +1,94 @@
+-- total sales and profit by category and subcategories
+select 
+category,
+subcategory,
+round(sum(sales), 2) as total_sales,
+round(sum(profit), 2) as total_profit,
+round(avg(profit/sales)*100, 2) as profit_margin
+from superstore_sales
+group by category, subcategory
+order by total_sales desc;
+
+-- Monthly sales trend
+select 
+ordermonth,
+round(sum(sales),2) as total_sales
+from superstore_sales
+group by ordermonth
+order by ordermonth;
+
+-- Top customers contributing to revenue
+select 
+customername,
+round(sum(sales),2) as total_spent,
+count(distinct(orderid)) as total_orders
+from superstore_sales
+group by customername
+order by total_spent desc limit 10;
+
+-- Average Order Value(AOV) and Customer Lifetime Value(CLV)
+select
+customername,
+round(sum(sales)/count(distinct(orderid)),2) as AOV,
+round(sum(sales),2) as CLV
+from superstore_sales
+group by customername
+order by CLV desc limit 10;
+
+-- Region wise sales and profit distribution
+select 
+region,
+round(sum(sales),2) as total_sales,
+round(sum(profit), 2) as total_profit
+from superstore_sales
+group by region
+order by total_sales;
+
+-- Detecting high discounted orders that resulted in loss
+select 
+orderid,
+productname,
+sales,
+discount,
+profit
+from superstore_sales
+where profit < 0
+order by discount desc;
+
+-- most frequently ordered product
+select 
+productname,
+count (*) as total_count,
+round(sum(sales),2) as total_sales
+from superstore_sales
+group by productname
+order by total_count desc;
+
+-- Year over Year Sales growth
+select 
+orderyear,
+round(sum(sales),2) as total_sales,
+
+round((sum(sales) - lag(sum(sales))
+over 
+(order by orderyear)) / lag(sum(sales))
+over 
+(order by orderyear)*100, 2) as YoY_growth
+
+from superstore_sales
+group by orderyear
+order by orderyear;
+
+-- finding best shipping method for profitable orders
+select 
+shipmode,
+round(sum(sales), 2) as total_sales,
+round(sum(profit), 2) as total_profit,
+round(avg(delivery_days), 2) as average_delivery_days
+from (
+select *, 
+datediff(DAY, ORDERDATE, SHIPDATE) as delivery_days
+from superstore_sales
+) subquery
+group by shipmode
+order by total_profit desc;
