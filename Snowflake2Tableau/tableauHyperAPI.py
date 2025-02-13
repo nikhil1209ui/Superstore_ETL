@@ -6,9 +6,9 @@ import pandas as pd
 # Connecting to Snowflake
 conn = connect(
 
-           user = 'Nikhil',
-           password = 'Nappi7carter#',
-           account = 'lp28715.me-central2.gcp',
+           user = 'Your Username',
+           password = 'Your Password',
+           account = 'Your Account Identifier',
            warehouse = 'COMPUTE_WH',
            database = 'SUPERSTORE',
            schema = 'SALES'
