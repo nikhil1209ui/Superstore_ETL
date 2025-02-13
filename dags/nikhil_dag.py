@@ -73,9 +73,9 @@ def load_data(**context):
 
     conn = connect(
 
-           user = 'Nikhil',
-           password = 'Nappi7carter#',
-           account = 'lp28715.me-central2.gcp',
+           user = 'your username',
+           password = 'your password',
+           account = 'your account identifier',
            warehouse = 'COMPUTE_WH',
            database = 'SUPERSTORE',
            schema = 'SALES'
