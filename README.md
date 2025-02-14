@@ -9,7 +9,7 @@ This project is an end-to-end data architecture solution built to demonstrate sk
 - [Project Structure](#project-structure)
 - [Setup & Installation](#setup--installation)
 - [How to Run the ETL Pipeline](#how-to-run-the-etl-pipeline)
-- [Business Insights SQL Queries](#business-insights-Queries)
+- [Business Insights SQL Queries](#Business-Insight-Queries)
 - [Visualization with Power BI](#visualization-with-power-bi)
 - [Challenges & Learnings](#challenges--learnings)
 
@@ -34,7 +34,8 @@ superstore_etl_project/
 │      └──extracted_data.csv # Data extracted by Airflow DAG 
 │      └── transformed_data.csv # Data after transformation step 
 ├── dags/
-│ └── nikhil_dag.py # Airflow DAG for ETL (extract, transform, load) 
+│ └── nikhil_dag.py # Airflow DAG for ETL (extract, transform, load)
+├── Snowflake_SQL_Queries #Queries used for table creation, altering and analysis
 ├── docker-compose.yaml # Docker Compose file to run Airflow services
 ├── .env # Environment variables (e.g., Snowflake credentials) 
 └──  README.md # Project documentation (this file) 
