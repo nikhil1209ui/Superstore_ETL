@@ -9,7 +9,7 @@ This project is an end-to-end data architecture solution built to demonstrate sk
 - [Project Structure](#project-structure)
 - [Setup & Installation](#setup--installation)
 - [How to Run the ETL Pipeline](#how-to-run-the-etl-pipeline)
-- [Business Insights SQL Queries](https://github.com/nikhil1209ui/Superstore_ETL/edit/main/README.md#business-insight-queries-queries)
+- [Business Insights SQL Queries](#business-insight-queries-queries)
 - [Visualization with Power BI](#visualization-with-power-bi)
 - [Challenges & Learnings](#challenges--learnings)
 
