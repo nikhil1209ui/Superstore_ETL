@@ -85,6 +85,7 @@ superstore_etl_project/
     ORDERYEAR NUMBER(38,0)
     );```
   -Verify that the table is created successfully before running the ETL pipeline.
+  
 3. Configure Environment Variables:
   - Create or update the .env file with your Snowflake credentials and any other required environment variables.
   - Start Apache Airflow Using Docker Compose:
